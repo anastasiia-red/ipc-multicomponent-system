@@ -56,10 +56,6 @@ All processes are launched and managed by a central launcher process.
 # Output
 You will see console logs from each process (e.g., proc_reader_p1, proc_s, etc.), and serv2.txt will receive final UDP messages.
 
-# Architecture Diagram (Simplified)
 
-[p1.txt] - reader_p1 \
-                       proc_pr  -  pipe → shm  -  proc_s  -  shm → shm  -  TCP → UDP → serv2.txt
-[p2.txt] - reader_p2 /
               
 
