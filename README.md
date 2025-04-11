@@ -58,18 +58,8 @@ You will see console logs from each process (e.g., proc_reader_p1, proc_s, etc.)
 
 # Architecture Diagram (Simplified)
 
-[p1.txt]      [p2.txt]
-   |             |
-reader_p1     reader_p2
-   \             /
-     \         /
-       →  proc_pr
-              ↓
-         pipe → shm (T)
-              ↓
-           proc_s
-              ↓
-        shm → shm (D)
-              ↓
-      TCP → UDP → serv2.txt
+[p1.txt] - reader_p1 \
+                       proc_pr  -  pipe → shm  -  proc_s  -  shm → shm  -  TCP → UDP → serv2.txt
+[p2.txt] - reader_p2 /
+              
 
